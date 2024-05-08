@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Who from "./components/Who";
 import Works from "./components/Works";
 import Hero from "./components/Hero";
+import Portfolio from "./components/Portfolio";
 
 const Container = styled.div`
   height: 100vh;
@@ -43,12 +44,13 @@ function App() {
         scrollToWho={scrollToWho}
         scrollToWorks={scrollToWorks}
       />
-      <div ref={whoRef}>
-        <Who />
-      </div>
+      {/* <div ref={whoRef}>
+        <Who /> */}
+      {/* </div> */}
       <div ref={worksRef}>
         <Works />
       </div>
+      <Portfolio />
       <div ref={contactRef}>
         <Contact />
       </div>
