@@ -20,6 +20,10 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -31,6 +35,11 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  
+  @media only screen and (max-width: 768px) {
+    width: 18.75rem
+  }
 `;
 
 const Input = styled.input`
@@ -58,6 +67,10 @@ const Button = styled.button`
 const Left = styled.div`
   flex: 1;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Contact = () => {
@@ -94,16 +107,11 @@ const Contact = () => {
         </Left>
         <Right>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Us</Title>
+            <Title>Get In Touch</Title>
             <Input placeholder="Name" name="name" required />
             <Input placeholder="Email" name="email" type="email" required />
-            <Textarea
-              placeholder="Write your message"
-              name="message"
-              rows={10}
-              required
-            />
-            <Button type="submit">Send</Button>
+            <Textarea placeholder="Message" name="message" rows={10} required />
+            <Button type="Send">Send</Button>
             {success &&
               "Your message has been sent. We'll get back to you soon :) "}
           </Form>

@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Skills from "./Skills";
+import Reacticon from "./Reacticon";
+import HtmlCssIcon from "./HtmlCssIcon";
+import JsIcon from "./JsIcon";
+import NodejsIcon from "./NodejsIcon";
 
-const data = [
-  "Web Design",
-  "Development",
-  "Illustration",
-  "Product Design",
-  "Social Media",
-];
+const data = ["Skills :", "HTML+CSS", "JavaScript", "ReactJS", "Node.js"];
 
 const Section = styled.div`
   height: 100vh;
@@ -20,16 +19,27 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    padding: 4.25rem 0 0 1.25rem;
+    justify-content: center;
+  }
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
+
+  @media only screen and (max-width: 768px) {
+  }
 `;
 
 const List = styled.ul`
@@ -46,6 +56,12 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 2.5rem;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
 
   ::after {
     content: "${(props) => props.text}";
@@ -76,19 +92,33 @@ const ListItem = styled.li`
 `;
 
 const Works = () => {
+  const [work, setWork] = useState("Skills");
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item}>
+              <ListItem key={item} text={item} onClick={() => setWork(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
-        <Right></Right>
+        <Right>
+          {work === "Node.js" ? (
+            <NodejsIcon />
+          ) : work === "ReactJS" ? (
+            <Reacticon />
+          ) : work === "HTML+CSS" ? (
+            // <HtmlCssIcon />
+            <Skills />
+          ) : work === "JavaScript" ? (
+            <JsIcon />
+          ) : (
+            <Skills />
+          )}
+        </Right>
       </Container>
     </Section>
   );

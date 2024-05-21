@@ -1,11 +1,12 @@
 import styled from "styled-components";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useRef } from "react";
 import Contact from "./components/Contact";
-import Who from "./components/Who";
 import Works from "./components/Works";
 import Hero from "./components/Hero";
+import PortfolioHome from "./components/PortfolioHome";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
+import Who from "./components/Who";
 
 const Container = styled.div`
   height: 100vh;
@@ -21,39 +22,35 @@ const Container = styled.div`
 `;
 
 function App() {
-  const contactRef = useRef(null);
-  const whoRef = useRef(null);
   const worksRef = useRef(null);
-
-  const scrollToContact = () => {
-    contactRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToWho = () => {
-    whoRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToWorks = () => {
-    worksRef.current.scrollIntoView({ behavior: "smooth" });
-  };
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <Container>
       <Hero
-        scrollToContact={scrollToContact}
-        scrollToWho={scrollToWho}
-        scrollToWorks={scrollToWorks}
+        worksRef={worksRef}
+        portfolioRef={portfolioRef}
+        contactRef={contactRef}
       />
-      {/* <div ref={whoRef}>
-        <Who /> */}
-      {/* </div> */}
+
       <div ref={worksRef}>
         <Works />
       </div>
-      <Portfolio />
+
+      <div ref={portfolioRef}>
+        <PortfolioHome />
+      </div>
+
       <div ref={contactRef}>
         <Contact />
       </div>
+
+      {/* 
+       <div ref={whoRef}>
+        <Who /> 
+      </div> */}
+      {/* <Portfolio /> */}
     </Container>
   );
 }
