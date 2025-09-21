@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     },
     {
       icon: <Linkedin size={20} />,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/tina-hu-frontend/",
       label: "LinkedIn",
     },
     {

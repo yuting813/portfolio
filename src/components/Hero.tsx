@@ -14,11 +14,12 @@ const Hero: React.FC = () => {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-start to-brand-end"
+      aria-labelledby="hero-title"
     >
-      <div className="container-max section-padding  pt-10 md:pt-13 text-center">
+      <div className="container-max section-padding pt-10 md:pt-12 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Profile Image */}
-          <div className="my-6 ">
+          <div className="my-6">
             <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden ring-2 ring-rose-100 shadow">
               <img
                 src={profileImg}
@@ -34,7 +35,10 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Main Content */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1
+            id="hero-title"
+            className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
+          >
             你好，我是
             <span className="text-primary-600 block mt-2">
               前端工程師 Tina Hu
@@ -51,10 +55,18 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="#projects" className="btn-primary">
+            <a
+              href="#projects"
+              className="btn-primary"
+              aria-label="查看我的專案作品"
+            >
               查看專案作品
             </a>
-            <a href="#contact" className="btn-secondary">
+            <a
+              href="#contact"
+              className="btn-secondary"
+              aria-label="前往聯絡方式"
+            >
               聯絡我
             </a>
           </div>
@@ -62,51 +74,56 @@ const Hero: React.FC = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-10">
             <a
-              href="https://github.com/yuting813/mern-project"
+              href="https://github.com/yuting813"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               className="text-gray-600 hover:text-primary-600 transition-colors"
               title="GitHub"
             >
-              <Github size={24} />
+              <Github size={24} aria-hidden="true" />
             </a>
 
             <a
-              href="https://linkedin.com" // 之後換成你的實際 LinkedIn
-              target="_blank" // ✅ 新分頁開啟
-              rel="noopener noreferrer" // ✅ 安全屬性
+              href="https://www.linkedin.com/in/tina-hu-frontend/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-gray-600 hover:text-primary-600 transition-colors"
               title="LinkedIn"
             >
-              <Linkedin size={24} />
+              <Linkedin size={24} aria-hidden="true" />
             </a>
 
             <a
               href="mailto:tinahuu321@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Email"
               className="text-gray-600 hover:text-primary-600 transition-colors"
               title="Email"
             >
-              <Mail size={24} />
+              <Mail size={24} aria-hidden="true" />
             </a>
           </div>
 
           {/* Scroll Indicator */}
-          <div
-            className="animate-bounce cursor-pointer hover:text-primary-500 transition-colors"
+          <button
+            type="button"
+            className="mx-auto block motion-safe:animate-bounce hover:text-primary-500 transition-colors"
             onClick={scrollToNextSection}
-            role="button"
-            aria-label="向下滾動"
+            aria-label="向下滾動到關於我"
           >
             <ChevronDown
               size={32}
-              className="text-gray-400 mx-auto hover:text-primary-500"
+              className="text-gray-400 hover:text-primary-500"
+              aria-hidden="true"
             />
-          </div>
+          </button>
+          {/* 對減少動作使用者停用動畫 */}
+          <style>{`
+            @media (prefers-reduced-motion: reduce) {
+              .motion-safe\\:animate-bounce { animation: none !important; }
+            }
+          `}</style>
         </div>
       </div>
     </section>
