@@ -34,12 +34,7 @@ const Contact: React.FC = () => {
       content: "tinahuu321@gmail.com",
       link: "mailto:tinahuu321@gmail.com",
     },
-    // {
-    //   icon: <Phone size={24} />,
-    //   title: "電話",
-    //   content: "+886 912 345 678",
-    //   link: "tel:+886912345678",
-    // },
+   
     {
       icon: <MapPin size={24} />,
       title: "位置",
