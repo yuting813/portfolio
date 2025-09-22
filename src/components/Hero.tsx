@@ -29,7 +29,6 @@ const Hero: React.FC = () => {
                 height={128}
                 loading="eager" // 首屏圖：優先載入
                 decoding="async"
-                fetchPriority="high" // 提示瀏覽器提高優先級
               />
             </div>
           </div>
