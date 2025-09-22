@@ -1,46 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
   <head>
+    <!-- 1) 基礎必備） -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- 2) Title / Description / Robots / Canonical -->
+    <title>Tina Hu｜前端工程師 Portfolio（React / TypeScript）</title>
     <meta
       name="description"
-      content="前端開發者 Tina Hu 個人作品集 - 展示我的專案和技術"
+      content="前端工程師 Tina Hu 的個人作品集。專注 React 與 TypeScript，作品包含 MERN 課程平台、Netflix Clone，強調工程化流程、可維護性與使用者體驗。"
     />
-    <title>Tina Hu 個人作品集 | Frontend Developer Portfolio</title>
-    <!-- Favicon / App Icons -->
-    <link rel="icon" href="%BASE_URL%favicon.ico?v=2" />
-    <link  
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://yuting813.github.io/portfolio/" />
+
+    <!-- 3) Favicon / Icons（使用 %BASE_URL% 以支援 Pages 子路徑） -->
+    <link rel="icon" href="%BASE_URL%favicon.ico" />
+    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="%BASE_URL%favicon-32x32.png?v=2"
+      href="%BASE_URL%favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="%BASE_URL%favicon-16x16.png?v=2"
+      href="%BASE_URL%favicon-16x16.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="%BASE_URL%apple-touch-icon.png?v=2"
+      href="%BASE_URL%apple-touch-icon.png"
     />
-    <link rel="manifest" href="%BASE_URL%site.webmanifest?v=2" />
-    
+    <!-- <link rel="manifest" href="%BASE_URL%manifest.webmanifest" /> -->
 
-    <meta name="theme-color" content="#ffffff" />
+    <!-- 4) Theme Color -->
+    <meta name="theme-color" content="#E85EAD" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    <!-- 5) Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tina Hu Portfolio" />
+    <meta
+      property="og:title"
+      content="Tina Hu｜前端工程師 Portfolio（React / TypeScript）"
     />
+    <meta
+      property="og:description"
+      content="MERN 課程平台、Netflix Clone；以工程化與可維護性打造清晰體驗。"
+    />
+    <meta property="og:url" content="https://yuting813.github.io/portfolio/" />
+    <meta
+      property="og:image"
+      content="https://yuting813.github.io/portfolio/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- 6) Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Tina Hu｜前端工程師 Portfolio（React / TypeScript）"
+    />
+    <meta
+      name="twitter:description"
+      content="MERN 課程平台、Netflix Clone；以工程化與可維護性打造清晰體驗。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://yuting813.github.io/portfolio/og-image.png"
+    />
+
+    <!-- 7) JSON-LD 結構化資料（可放最後） -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tina Hu",
+        "jobTitle": "Frontend Engineer",
+        "url": "https://yuting813.github.io/portfolio/",
+        "sameAs": [
+          "https://github.com/yuting813",
+          "https://www.linkedin.com/in/tina-hu-frontend/"
+        ],
+        "knowsAbout": ["React", "TypeScript", "Node.js", "Tailwind CSS", "MERN"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
