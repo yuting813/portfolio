@@ -1,0 +1,21 @@
+name = "portfolio-mail-worker"
+main = "src/index.ts"
+compatibility_date = "2024-09-20"
+
+# ---- Prod (deploy) ----
+[vars]
+ALLOWED_ORIGINS = "https://www.tinahu.dev,https://tinahu.dev"
+FROM_EMAIL = "Tina <noreply@tinahu.dev>"
+TO_EMAIL   = "tinahuu321@gmail.com"
+
+# ---- Preview / Local (wrangler dev, preview deploy) ----
+[env.preview.vars]
+ALLOWED_ORIGINS = "http://localhost:5173,http://localhost:4173"
+
+# 自家網域綁定
+routes = [
+  { pattern = "api.tinahu.dev", custom_domain = true }
+]
+
+# 可選：若不想要 *.workers.dev 測試網址就開啟
+workers_dev = false
