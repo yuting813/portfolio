@@ -30,14 +30,14 @@ const Projects: React.FC = () => {
         "JWT",
         "Mongoose",
       ],
-      liveUrl: "https://mern-project-ivory.vercel.app/",
+      liveUrl: "https://course.tinahu.dev/",
       githubUrl: "https://github.com/yuting813/mern-project",
       featured: true,
       highlights: [
         "RESTful API 設計與實作",
         "MongoDB 資料庫設計",
         "JWT 身份驗證系統",
-        "CRUD 操作完整實現",
+        "CRUD 操作完整實現", 
         "前後端分離架構",
       ],
     },
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
         "Firebase",
         "TMDB API",
       ],
-      liveUrl: "https://project-netflix-clone-two.vercel.app/",
+      liveUrl: "https://stream.tinahu.dev/",
       githubUrl: "https://github.com/yuting813/project-_netflix-clone",
       featured: true,
       highlights: [
@@ -96,7 +96,7 @@ const Projects: React.FC = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                     loading="lazy"
+                    loading="lazy"
                     decoding="async"
                     width={800}
                     height={450}

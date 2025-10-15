@@ -4,7 +4,7 @@ compatibility_date = "2024-09-20"
 
 # ---- Prod (deploy) ----
 [vars]
-ALLOWED_ORIGINS = "https://www.tinahu.dev,https://tinahu.dev"
+ALLOWED_ORIGINS="https://www.tinahu.dev,https://tinahu.dev,https://stream.tinahu.dev,https://course.tinahu.dev"
 FROM_EMAIL = "Tina <noreply@tinahu.dev>"
 TO_EMAIL   = "tinahuu321@gmail.com"
 
