@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Heart } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -14,11 +14,6 @@ const Footer: React.FC = () => {
       icon: <Linkedin size={20} />,
       href: "https://www.linkedin.com/in/tina-hu-frontend/",
       label: "LinkedIn",
-    },
-    {
-      icon: <Mail size={20} />,
-      href: "mailto:tinahuu321@gmail.com",
-      label: "Email",
     },
   ];
 
