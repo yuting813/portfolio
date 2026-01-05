@@ -53,7 +53,9 @@ const About: React.FC = () => {
               關於我
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              從採購到前端：兩個專案驗證——把需求拆成可維護的前端與可量化的體驗
+              從採購到前端：兩個專案驗證——
+              <br />
+              把需求拆成可維護的前端結構，並以指標驗證體驗是否穩定
             </p>
           </div>
 

@@ -45,11 +45,11 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            專注 React 與 TypeScript，
+            專注前端系統設計、狀態可預測性，以及 UX 邊界情境處理。
             <br />
-            透過 MERN 課程平台與 Netflix Clone 專案—
-            <br />
-            將需求轉化為易維護程式碼與流暢用戶體驗的能力。
+            我以工程可解釋性為目標設計前端系統，
+            重視架構清晰度、狀態初始化穩定性， 以及在 loading / error / auth
+            等情境下的 UI 行為一致性。
           </p>
 
           {/* CTA Buttons */}
